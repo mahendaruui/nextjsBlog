@@ -5,7 +5,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Layout pageTitle="Home Page">
-        <Image src="/vim-1.png" width="300" height="200" alt="profile" layout="intrinsic" />
+        <Image src="/vim-1.png" width="300" height="200" alt="bookmark" layout="intrinsic" />
         <h1> Ini Konten </h1>
       </Layout >
     </>

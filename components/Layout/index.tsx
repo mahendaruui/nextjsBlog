@@ -13,7 +13,7 @@ export default function Layout(props: LayoutProps) {
   const { children, pageTitle } = props;
 
   return (
-    <div>
+    <div className="font-poppins">
       <Head>
         <title>Basic NextJs | {pageTitle} </title>
         <meta name="description" content="Webside NextJS Basic" />
