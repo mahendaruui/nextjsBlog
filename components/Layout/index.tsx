@@ -14,7 +14,7 @@ export default function Layout(props: LayoutProps) {
   return (
     <div className="font-poppins">
       <Head>
-        <title>Basic NextJs | {pageTitle} </title>
+        <title>Mahendar Dwi Payana Blog | {pageTitle} </title>
         <meta name="description" content="Webside NextJS Basic" />
         <link
           rel="stylesheet"

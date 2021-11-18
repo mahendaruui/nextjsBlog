@@ -1,65 +1,38 @@
+// importing font-awesome nextjs
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 export default function Footer() {
   return (
     <>
-      <div className="flex items-center justify-between flex-wrap bg-gray-500 p-10 text-gray-200">
-        <div className="sm:flex mb-4">
-          <div className="sm:w-1/4 h-auto">
-            <div className="text-orange mb-2">Orange</div>
-            <ul className="list-reset leading-normal">
-              <li className="hover:text-orange text-grey-darker">One</li>
-              <li className="hover:text-orange text-grey-darker">Two</li>
-              <li className="hover:text-orange text-grey-darker">Three</li>
-              <li className="hover:text-orange text-grey-darker">Four</li>
-              <li className="hover:text-orange text-grey-darker">Five</li>
-              <li className="hover:text-orange text-grey-darker">Six</li>
-              <li className="hover:text-orange text-grey-darker">Seven</li>
-              <li className="hover:text-orange text-grey-darker">Eight</li>
+      <footer className="bg-port-blue py-8">
+        <div className="container flex flex-col md:flex-row items-center">
+          <div
+            className="
+            flex flex-1 flex-wrap
+            items-center
+            justify-center
+            md:justify-start
+            gap-12
+          "
+          >
+            <img src="./imgs/logo-port-white.png" alt="" />
+            <ul className="flex text-white uppercase gap-12 text-xs">
+              <li className="cursor-pointer">Features</li>
+              <li className="cursor-pointer">Pricing</li>
+              <li className="cursor-pointer">Contact</li>
             </ul>
           </div>
-          <div className="sm:w-1/4 h-auto sm:mt-0 mt-8">
-            <div className="text-blue mb-2">Blue</div>
-            <ul className="list-reset leading-normal">
-              <li className="hover:text-blue text-grey-darker">One</li>
-              <li className="hover:text-blue text-grey-darker">Two</li>
-              <li className="hover:text-blue text-grey-darker">Three</li>
-            </ul>
-
-            <div className="text-blue-light mb-2 mt-4">Blue-light</div>
-            <ul className="list-reset leading-normal">
-              <li className="hover:text-blue-light text-grey-darker">One</li>
-              <li className="hover:text-blue-light text-grey-darker">Two</li>
-              <li className="hover:text-blue-light text-grey-darker">Three</li>
-            </ul>
-
+          <div className="flex gap-10 mt-12 md:mt-0">
+            <li>
+              <i className="text-white text-2xl fab fa-twitter"></i>
+            </li>
+            <li>
+              <FontAwesomeIcon icon={["fab", "facebook-f"]} className="text-white text-2xl" />
+              <i className="text-white text-2xl fab fa-facebook-square"></i>
+            </li>
           </div>
-          <div className="sm:w-1/4 h-auto sm:mt-0 mt-8">
-            <div className="text-green-dark mb-2">Green-dark</div>
-            <ul className="list-reset leading-normal">
-              <li className="hover:text-green-dark text-grey-darker">One</li>
-              <li className="hover:text-green-dark text-grey-darker">Two</li>
-              <li className="hover:text-green-dark text-grey-darker">Three</li>
-            </ul>
-
-            <div className="text-green-light mb-2 mt-4">Green-light</div>
-            <ul className="list-reset leading-normal">
-              <li className="hover:text-green-light text-grey-darker">One</li>
-              <li className="hover:text-green-light text-grey-darker">Two</li>
-              <li className="hover:text-green-light text-grey-darker">Three</li>
-            </ul>
-
-
-          </div>
-          <div className="sm:w-1/2 sm:mt-0 mt-8 h-auto">
-            <div className="text-red-light mb-2">Newsletter</div>
-            <p className="text-grey-darker leading-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, consectetur. </p>
-            <div className="mt-4 flex">
-              <input type="text" className="p-2 border border-grey-light round text-grey-dark text-sm h-auto" placeholder="Your email address" />
-              <button className="bg-orange text-white rounded-sm h-auto text-xs p-3">Subscribe</button>
-            </div>
-          </div>
-
         </div>
-      </div>
+      </footer>
     </>
-  )
+  );
 }
