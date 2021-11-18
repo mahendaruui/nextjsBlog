@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 
 export default function Header() {
   return (
@@ -8,7 +8,7 @@ export default function Header() {
         <nav className="container items-center py-4 mt-4 sm:mt-12 ">
           <div className="flex justify-between">
             <Link href="/">
-              <p className="font-semibold text-gray-600 cursor-pointer">Mahend's Blog </p>
+              <p className="font-semibold text-gray-600 cursor-pointer">Mahendar Blog </p>
             </Link>
             <ul className="hidden sm:flex flex-1 justify-end items-center gap-12 text-port-blue uppercase text-xs ">
               <Link href="/users">
