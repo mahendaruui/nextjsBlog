@@ -15,7 +15,9 @@ export default function Layout(props: LayoutProps) {
     <div className="font-poppins">
       <Head>
         <title>Mahendar Dwi Payana Blog | {pageTitle} </title>
-        <meta name="description" content="Webside NextJS Basic" />
+        <meta charSet="UTF-8" />
+        <meta name="description" content="My Biografi website" />
+        <meta name="author" content="Mahendar Dwi Payana" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -23,7 +25,7 @@ export default function Layout(props: LayoutProps) {
         />
       </Head>
       <Header />
-      <div className="h-full my-10">{children}</div>
+      <div>{children}</div>
       <Footer />
     </div>
   );

@@ -1,49 +1,71 @@
 import type { NextPage } from "next";
 import Layout from "../components/Layout";
+import Secsection from "./../components/Home/Secsection";
+import tw from "tailwind-styled-components";
 
 const Home: NextPage = () => {
   return (
     <>
       <Layout pageTitle="Home Page">
-        <section className="mt-14">
-          <div className="container flex flex-col-reverse lg:flex-row items-center gap-12 mt-14 lg:mt-28">
-            <div className="flex flex-1 flex-col items-center lg:items-start ">
-              <h2 className="text-port-blue text-3xl md:text-4 lg:text-5xl text-center lg:text-left mb-6 ">
+        <SectionHeader>
+          <ContainerBio>
+            <ContentBio>
+              <p className="text-port-white text-3xl md:text-4 lg:text-4xl uppercase text-center lg:text-left mb-6 z-50 text-shadow-lg">
                 Mahendar Dwi Payana
-              </h2>
-              <p className="text-gray-600 text-lg text-center lg:text-left mb-6 z-20">
+              </p>
+              <p className="text-port-white text-lg text-center mb-6 z-20 lg:text-justify text-shadow-lg">
                 Seorang dosen di Universitas Ubudiyah Indonesia, mengajar pada Fakultas Sains dan
                 teknologi di Program Studi Informatika. Selain mengajar saya juga seorang pengembang
                 aplikasi berbasis web (Web Developer). Di Universitas Ubudiyah Indonesia saya juga
                 berpengalaman sebagai Direktur di Diretorat Cyber Development Center dan pengambang
                 berbagai aplikasi yang terdapat di sana.
               </p>
-              <div className="flex justify-center flex-wrap gap-6">
+              <div className="flex justify-between flex-wrap gap-6">
                 <button
                   type="button"
-                  className="btn btn-purple hover:bg-port-white hover:text-black"
+                  className="btn flex items-center bg-port-white px-2 py-1 rounded-full hover:bg-white shadow-md"
                 >
-                  Instagram
+                  <img
+                    className="px-1"
+                    src="./imgs/pngegg.png"
+                    alt="instagram"
+                    height={25}
+                    width={25}
+                  />
+                  <p>Instagram</p>
                 </button>
                 <button
                   type="button"
-                  className="btn btn-white hover:bg-port-purple hover:text-white"
+                  className="btn flex items-center bg-port-white px-5 py-2 rounded-full hover:shadow-lg shadow-md"
                 >
-                  GitHub
+                  <img
+                    className="px-1"
+                    src="./imgs/github-logo.png"
+                    alt="instagram"
+                    height={25}
+                    width={25}
+                  />
+                  <p>GitHub</p>
                 </button>
               </div>
-            </div>
+            </ContentBio>
             <div className="flex justify-center flex-1 mb-10 md:mb-16 lg:mb-0 z-30">
               <img
-                className="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full rounded-full"
+                className="lg:w-full lg:h-full rounded-t-full"
                 src="./imgs/mahend_biru-removebg-preview.png"
                 alt="myfoto"
+                width="150"
+                height="150"
               />
             </div>
-          </div>
-          <div className="hidden md:block overflow-hidden bg-port-purple rounded-l-full absolute h-80 w-3/4 top-35 right-0 lg:-bottom-28 lg:-right-36 z-10"></div>
-        </section>
-        <section className="bg-port-white py-20 mt-20 lg:mt-60">
+          </ContainerBio>
+          {/* <IlusOne src="./imgs/undraw_portfolio_website_lidw.png" /> */}
+          <div className="hidden md:block overflow-hidden bg-blue-500 lg:rounded-l-full relative h-80 w-full z-0 -right-78 -top-80 shadow-md"></div>
+        </SectionHeader>
+
+        <Secsection />
+
+        {/* <section className="bg-port-white py-20 mt-20 lg:mt-60">
           <div className="sm:w-3/4 lg:w-5/12 mx-auto px-2">
             <h1 className="text-3xl text-center text-port-blue">Features</h1>
             <p className="text-center text-port-grey mt-4">
@@ -275,9 +297,15 @@ const Home: NextPage = () => {
               </button>
             </div>
           </div>
-        </section>
+        </section> */}
       </Layout>
     </>
   );
 };
+
 export default Home;
+
+const SectionHeader = tw.div`bg-port-blue shadow-lg`;
+const ContainerBio = tw.div`container flex flex-col-reverse lg:flex-row items-center gap-10 lg:mt-5`;
+const ContentBio = tw.div`flex flex-1 flex-col items-center lg:items-start z-10`;
+const IlusOne = tw.img`hidden md:block overflow-hidden bg-blue-500  relative h-80 z-0 -right-78 -top-80 shadow-md`;
